@@ -1,0 +1,76 @@
+.gsc-history {
+	.date {
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+	.desc {
+		font-size: 16px;
+		line-height: 26px;		
+	}
+	.item-content {	
+		text-align: center;					
+		@include media-breakpoint-up(sm){	
+			position: relative;
+			padding-left: 20px;
+			min-height: 170px;
+			text-align: left;
+			&:after {
+				content: "";
+				width: 1px;
+				height: 100%;
+				background: rgba($white, 0.1);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			&:before {
+				content: "";
+				width: 12px;
+				height: 12px;
+				background: $theme-color;
+				position: absolute;			
+				left: -6px;
+			}
+		}
+	}
+	.init-carousel-owl .owl-item > .item {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+	@include media-breakpoint-up(sm){
+		.owl-item.active {
+			&:nth-child(odd) {
+				.item-content {	
+					border-bottom: 2px solid rgba($white, 0.05);			
+					&:before {
+						bottom: -6px;
+					}
+				}
+				.desc {
+					padding-bottom: 50px;
+				}
+			}
+			&:nth-child(even) {
+				.item-content {				
+					margin-top: 170px;
+					border-top: 2px solid rgba($white, 0.05);				
+					&:before {
+						top: -9px;
+					}
+				}
+				.date {
+					padding-top: 50px;
+				}
+			}
+		}
+	}
+	&.text-light{
+		.date{
+			color: $white;
+		}
+		.desc {
+			color: #d0d0d4;
+		}
+	}
+}

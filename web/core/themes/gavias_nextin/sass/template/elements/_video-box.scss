@@ -1,0 +1,108 @@
+.gsc-video-box{
+  position: relative;
+  .bg-full {
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }    
+  .icon{
+    @include size(100px, 100px);
+    @include transition(all 0.35s);       
+    color: $white;
+    font-size: 24px;
+    display: inline-block;
+    text-align: center;
+    line-height: 75px;
+    border: 12px solid $white;
+    &:hover, &:focus {
+      border-color: $theme-color;
+      color: $theme-color;
+      @include border-radius(50%);
+    }
+  }
+  &.style-1{
+    .bg-full {
+      padding: 120px 15px;
+      text-align: center;
+      background-attachment: fixed;
+      @include media-breakpoint-down(md){
+        padding: 100px 15px;
+      }
+    }
+    .video-desc {
+      font-size: 70px;
+      line-height: 85px;
+      color: $white;
+      max-width: 700px;
+      margin: 60px auto 0;
+      @include media-breakpoint-down(md){
+        font-size: 40px;
+        line-height: 50px;
+        margin-top: 30px;
+      }
+    }
+  }
+  &.style-2{
+    @include media-breakpoint-down(md){
+      margin-bottom: 30px;  
+    } 
+    .popup-video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 19; 
+      @include size(100%, 100%); 
+      text-transform: capitalize;          
+    } 
+    .icon{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 19;
+      @include transform (translate(-50%, -50%));
+    } 
+    .link-video{
+      font-size: 12px;
+      font-weight: 400;
+      margin: 20px 0 0 35px;
+      position: relative;
+      float: left;
+      text-transform: capitalize;
+      &:after {
+        content: "";
+        position: absolute;
+        @include size(30px, 1px);
+        background-color: $black;
+        top: 14px;
+        left: -35px;
+      }
+      strong{
+        font-size: 14px;
+      }
+    }
+    .button-review {
+      float: right;
+      margin-top: 20px;
+      a{
+        @include transition(all 0.35s);
+        color: $black;
+        border: 1px solid $black;
+        padding: 4px 15px;
+        @include border-radius(30px);
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        &:hover{
+          color: $white;
+          background: $theme-color;
+          border-color: $theme-color;
+        }
+      }
+    }
+    .video-inner{
+      position: relative;
+    }
+  }
+}

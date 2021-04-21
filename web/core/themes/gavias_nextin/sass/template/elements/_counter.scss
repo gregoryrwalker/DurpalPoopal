@@ -1,0 +1,161 @@
+.milestone-block{
+   @include media-breakpoint-down(md){
+      margin-bottom: 30px;  
+   }  
+   &.position-icon-top{
+      text-align: center;
+      display: block;
+      width: 100%;
+      padding: 45px 30px;
+      background: $theme-color; 
+      .milestone-icon{
+         color: $white;
+         display: inline-block;
+         text-align: center;
+         float: none;
+         margin: 0;
+         margin-bottom: 15px;
+         display: inline-block;
+         .icon{
+            color: $white;
+            font-size: 50px;
+            line-height: 1;
+         }
+      }
+      .milestone-right{
+         display: block;
+         text-align: center;
+         float: none;
+         width: 100%;
+         margin-top: 10px;
+      }
+      .milestone-number{
+         font-size: 30px;
+         font-weight: 600;
+         line-height: 1.1;
+      }
+      .milestone-text{
+         font-size: 18px;
+         font-weight: 400;
+         color: $headings-color;
+      } 
+   }
+   &.position-icon-left{
+      background: $white;
+      @include clearfix();
+      margin-bottom: 20px;
+      .milestone-icon{
+         color: $theme-color;
+         display: inline-block;
+         text-align: center;
+         float: none;
+         margin: 0;
+         @include size(70px, 70px);
+         border: 1px solid $border-color;
+         @include border-radius(50%);
+         padding: 10px; 
+         margin-bottom: 5px;
+         display: inline-block;
+         float: left;
+         .icon{ 
+            display: block;
+            @include size(100%, 100%);
+            @include border-radius(50%);
+            text-align: center;
+            line-height: 50px;
+            color: $white;
+            background: $theme-color;
+            font-size: 18px;
+            @include box-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+         }
+         span{
+            color: $theme-color;
+            font-size: 38px;
+            line-height: 1;
+         }
+      }
+      .milestone-right{
+         padding-left: 85px;
+         text-align: left;
+         padding-top: 10px;
+         .milestone-number{
+            color: $black;
+            text-align: left;
+            font-size: 28px;
+            line-height: 1;
+            padding-top: 20px;
+         }
+        .milestone-text{
+            font-size: 20px;
+            text-align: left;
+            width: 100%;
+         }
+      }
+   }
+   &.position-no-icon{
+      text-align: center;
+      @include media-breakpoint-up(lg){
+         padding: 30px 0;
+      }
+      .milestone-number-inner{
+         font-size: 70px;
+         font-weight: 300;
+         line-height: 1;
+         color: $black;
+         margin-bottom: 10px;
+         @include media-breakpoint-down(md){
+            font-size: 50px;
+         }
+         .symbol{
+            color: $theme_color;
+            font-size: 90px;
+            @include media-breakpoint-down(md){
+               font-size: 50px;
+            }
+         }
+      }
+      .milestone-text{
+         font-size: 20px;
+         line-height: 24px;
+      }
+   }
+   &.position-icon-right{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      @include media-breakpoint-down(md){
+         padding: 30px 15px;
+      }
+      .icon-image {
+         order: 2;
+         margin-left: 20px;
+      }
+      .milestone-right {
+         text-align: left;
+      }
+      .milestone-number{
+         font-size: 60px;
+         margin-bottom: 10px;
+         line-height: 1;
+         @include media-breakpoint-down(xs){
+            font-size: 45px;
+         }
+      }
+      .milestone-text {
+         font-size: 24px;
+      }
+   }
+   &.text-light{
+      .milestone-number{
+         color: $white!important;
+      }
+      .milestone-text{
+         color: $white!important;
+      }
+      .milestone-icon span{
+         border-color: $white;
+         color: $white;
+      }
+   }
+}

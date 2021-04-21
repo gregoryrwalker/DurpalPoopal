@@ -1,0 +1,117 @@
+.gsc-images-parallax{
+  width: 720px;
+  max-width: 100%;
+  @include clearfix();
+  margin: 0 auto;
+  .images{
+    position: relative;
+  }
+  .action{
+    margin-top: 15px;
+  }
+  &.style-v1{
+    @include media-breakpoint-down(md){
+      margin-bottom: 60px;
+    }
+    .images{
+      position: relative;
+      text-align: center;
+      @include media-breakpoint-down(sm){
+        max-width: 650px;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+    .content-box{
+      background: $theme_color;
+      color: $white;
+      text-align: center;
+      padding: 20px 60px;
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      z-index: 99;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 500;      
+      border: 40px solid $white;
+      @include media-breakpoint-down(sm){
+        padding: 15px;
+        border-width: 10px;
+      }
+      .icon{
+        display: block;
+        width: 100%;
+        margin-bottom: 10px; 
+      }
+      a {
+        color: $white;
+      }
+      span {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }  
+    &.right{
+      .images{
+        text-align: left;
+        padding-bottom: 97px;
+        @include media-breakpoint-up(xl){
+          margin-right: 60px;
+        }
+      }
+      .image-1{
+        position: relative;
+        z-index: 1;
+        padding-right: 90px; 
+      }
+      .image-2{
+        position: absolute;
+        bottom: -120px;
+        right: 0;
+        z-index: 9;
+        padding-right: 0;
+        text-align: right;
+        max-width: 80%;
+        @include media-breakpoint-down(sm){
+          bottom: 0!important;
+        }
+      }
+      .content-box {
+        border-left: 0;
+      }
+    }
+
+    &.left{
+      .images{
+        text-align: right;
+        padding-bottom: 60px;
+      }
+      .image-1{
+        position: relative;
+        z-index: 1;
+        padding-left: 90px;
+      }
+      .image-2{
+        position: absolute;
+        bottom: -120px;
+        left: 0;
+        z-index: 9;
+        padding-left: 0;
+        text-align: left;
+        max-width: 80%;
+        @include media-breakpoint-down(sm){
+          bottom: 0!important;
+        }
+      }      
+      .content-box{
+        left: auto;
+        right: 0;
+        border-right: 0;
+      }
+    }
+  }
+}

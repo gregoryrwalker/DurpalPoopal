@@ -1,0 +1,11 @@
+.gsc-progress{
+   margin-bottom: 30px;
+   .progress-bar:before {
+       content: "";
+       width: 14px;
+       height: 16px;
+       background: $theme-color;
+       right: 0;
+       position: absolute;
+   }
+}
